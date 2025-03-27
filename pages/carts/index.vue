@@ -46,7 +46,8 @@ const { data: products, pending } = await useFetch(
 
   // .goods__item
   &__item {
-    flex: 0 1 33.333%;
+    flex: 1 1 auto;
+    align-items: stretch
   }
 
   // .goods__text

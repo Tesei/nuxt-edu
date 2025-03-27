@@ -3,10 +3,10 @@
 	<article class="goods__item card">
 		<div class="card__content">
 			<div class="card__picture _ibg">
-				<NuxtPicture
+				<img
 					:src="product.image"
 					:alt="product.title"
-					class="card__img"
+					class="card__img "
 				/>
 			</div>
 			<div class="card__about">
@@ -48,64 +48,39 @@ function setSpaceInPrice(price) {
 <style lang="scss" scoped>
 .card {
 	position: relative;
-	background: #FFFEFB;
-	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
 
-
-
-	// .card__bucket
-	&__bucket {
-		opacity: 0;
-		transition: all 0.2s ease 0s;
-		position: absolute;
-		width: 32px;
-		height: 32px;
-		top: -10px;
-		right: -10px;
-		z-index: 3;
-		cursor: pointer;
-
-		background: #FF8484;
-		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-		border-radius: 10px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	// .card__bucket-picture
-	&__bucket-picture {}
-
-	// .card__bucketImage
-	&__bucketImage {}
-
 	// .card__content
 	&__content {
-		border-radius: 4px 4px 4px 4px;
+		border-radius: 10px;
 		overflow: hidden;
-		height: 100%;
+		min-height: 100%;
 		display: flex;
 		flex-direction: column;
+		border: 1px solid #000;
+		max-width: 400px;
+		margin: 10px;		
 	}
 
 	// .card__picture
 	&__picture {
-		padding-bottom: 40%;
+		margin: 24px 24px 0 24px;
+		padding-bottom: 90%;
 	}
 
 	// .card__img
-	&__img {}
+	&__img {
+	}
 
 	// .card__about
 	&__about {
-		flex: 1 0 auto;
+		// flex: 1 0 auto;
 		word-wrap: break-word;
 		color: #3F3F3F;
 		padding: 16px 24px;
 		display: flex;
-		flex-direction: column;
+		flex-direction: column;		
 	}
 
 	// .card__title
@@ -113,9 +88,10 @@ function setSpaceInPrice(price) {
 		display: block;
 		font-style: normal;
 		font-weight: 600;
-		font-size: 2rem;
-		line-height: 2.5rem;
+		font-size: 16px;
+		line-height: 24px;
 		margin-bottom: 16px;
+		flex: 0 1 auto;
 	}
 
 	// .card__text
@@ -123,10 +99,10 @@ function setSpaceInPrice(price) {
 		display: block;
 		font-style: normal;
 		font-weight: 400;
-		font-size: 1.6rem;
-		line-height: 2rem;
+		font-size: 12px;
+		line-height: 16px;
 		margin-bottom: 20px;
-		flex: 1 1 auto;
+		flex: 1 0 auto;
 	}
 
 	// .card__price
@@ -134,10 +110,10 @@ function setSpaceInPrice(price) {
 		display: block;
 		font-style: normal;
 		font-weight: 600;
-		font-size: 2.4rem;
-		line-height: 3rem;
+		font-size: 24px;
+		line-height: 30px;
 		margin-bottom: 16px;
-		flex: 0 0 auto;
+		flex: 0 1 auto;
 	}
 
 	// card__btn
@@ -149,13 +125,13 @@ function setSpaceInPrice(price) {
 ._ibg {
 	position: relative;
 
-	img {
+	img  {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
-		object-fit: cover;
+		object-fit: contain;
 		object-position: center;
 	}
 }
